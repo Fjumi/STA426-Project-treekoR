@@ -21,7 +21,7 @@ suppressPackageStartupMessages({
   library(cowplot)
 })
 
-parClassificationFiles <- list.files("data/benchmarking_data/classification",
+parClassificationFiles <- list.files("/home/c/apetit/Desktop/STA426 project/adam2o1o-treekoR_analysis-aa87e15/data/benchmarking_data/classification",
                                      full.names = TRUE)
 
 load(file = parClassificationFiles[1])
@@ -258,7 +258,7 @@ AUC[4,3]<-aucf(bcr_prnt[[1]])$AUC[1]
 
 Analysis of Breast cancer tumor (5)
 
-```{r}
+```{r, message=F}
 breast<-ds[ds$dataset==unique(ds$dataset)[5],]
 breast<-prep(breast,"tumor")
 
@@ -463,5 +463,19 @@ rownames(AUC)<-c("Age chronic","Anti-CTLA-4 and anti-PD-1","Anti-PD-1","BCR-XL-s
 
 plot(c(AUC),ylim=c(0,1),ylab="AUC",col=rep(c(1:3),3),pch=16)
 legend("bottomright",legend=c("%total hopach","%total av. linkage","%parent"),col=c(1:3),pch=16)
+```
+
+
+ROC plots
+
+```{r}
+all<-list(breast_hpch,breast_link,breast_prnt,cmv_hpch,cmv_link,cmv_prnt,blood_hpch,blood_link,blood_prnt,baron_hpch,baron_link,baron_prnt,math_hpch,math_link,math_prnt,covid4_hpch,covid4_link,covid4_prnt,covid8_hpch,covid8_link,covid8_prnt,mela_hpch,mela_link,mela_prnt)
+title<-rep(c("%total hopach","%total average linkage","%parent"),8)
+
+par(mfrow=c(2,3))
+
+for(i in 1:length(all)){
+  plot(all[[i]][[2]],colorize=T,main=title[i])
+}
 ```
 

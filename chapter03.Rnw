@@ -16,5 +16,308 @@ part I: reproduction of treekoR analysis
 - report significant findings / observations
 
 part II: Benchmarking
+
+<<functions.code, echo=FALSE>>=
+
+library(ROCR)
+library(biostatUZH)
+
+#for prepping the datasets
+prep<-function(dataset,case){
+truth_binary<-vector(length=nrow(dataset))
+for(i in 1:nrow(dataset)){
+  if(dataset$truth[i]==case){
+    truth_binary[i]<-1
+  }
+}
+response_binary<-vector(length=nrow(dataset))
+for(i in 1:nrow(dataset)){
+  if(dataset$response[i]==case){
+    response_binary[i]<-1
+  }
+}
+return(data.frame(row_id=dataset$row_id,truth=truth_binary,response=response_binary,prob.pos=dataset$prob.pos,prob.neg=dataset$prob.neg,task_id=dataset$task_id))
+}
+
+
+#for doing the analysis
+analysis<-function(dataset,task1,task2){
+  df<-dataset[dataset$task_id==task1|dataset$task_id==task2,]
+  pred<-prediction(predictions=df$prob.pos,labels=df$truth)
+  perf<-performance(pred,"tpr","fpr")
+  return(list(df,perf))
+}
+
+#for obtaining the AUC
+aucf<-function(dataset){
+  return(confIntAUC(dataset$prob.pos[dataset$truth==1],dataset$prob.pos[dataset$truth==0]))
+}
+
+@
+
+
+<<data.code, echo=FALSE>>=
+suppressPackageStartupMessages({
+  library(ggplot2)
+  library(dplyr)
+  library(tidyr)
+  library(gridExtra)
+  library(ggnewscale)
+  library(cowplot)
+})
+
+parClassificationFiles <- list.files("/home/c/apetit/Desktop/STA426 project/adam2o1o-treekoR_analysis-aa87e15/data/benchmarking_data/classification",
+                                     full.names = TRUE)
+
+load(file = parClassificationFiles[1])
+
+parent_classif_df_combined <- allPredictions_df 
+
+for (i in 2:length(parClassificationFiles)){
+  load(file = parClassificationFiles[i])
+  
+  parent_classif_df_combined <- parent_classif_df_combined %>%
+    bind_rows(allPredictions_df)
+}
+
+#easier naming
+ds<-parent_classif_df_combined
+@
+
+
+<<analysis.code, echo=FALSE>>=
+
+AUC<-matrix(nrow=12,ncol=3)
+colnames(AUC)<-c("%total hopach","%total av.linkage","%parent")
+rownames(AUC)<-c("Age chronic","Anti-CTLA-4 and anti-PD-1","Anti-PD-1","BCR-XL-sim","Breast cancer tumor","CMV","COVID-19 whole blood CyTOF","COVID-19 PBMCs","COVID-19 PBMCs CD8+ non-naive T cells","COVID-19 T cells CD4","COVID-19 T cells CD8","Melanoma")
+
+tasks<-c("abs_prop_hopach","abs_prop_hc_avg","parent_prop_hc_avg","parent_prop_hopach")
+
+<<data.code>>
+<<functions.code>>
+  
+###Age Chronic
+age<-ds[ds$dataset=="Age Chronic Inflammation, Shen-Orr 2016",]
+age<-prep(age,"old")
+
+#%total hopach
+age_hpch<-analysis(age,tasks[1],tasks[1])
+AUC[1,1]<-aucf(age_hpch[[1]])$AUC[1]
+
+#%total average linkage
+age_link<-analysis(age,tasks[2],tasks[2])
+AUC[1,2]<-aucf(age_link[[1]])$AUC[1]
+
+#%parent
+age_prnt<-analysis(age,tasks[3],tasks[4])
+AUC[1,3]<-aucf(age_prnt[[1]])$AUC[1]
+
+
+###Anti-CTLA-4 and Anti-PD-1
+antis<-ds[ds$dataset=="Anti-CTLA-4 and Anti-PD-1, Subrahmanyam 2018",]
+antis<-prep(antis,"responder")
+
+#%total hopach
+antis_hpch<-analysis(antis,tasks[1],tasks[1])
+AUC[2,1]<-aucf(antis_hpch[[1]])$AUC[1]
+
+#%total average linkage
+antis_link<-analysis(antis,tasks[2],tasks[2])
+AUC[2,2]<-aucf(antis_link[[1]])$AUC[1]
+
+#%parent
+antis_prnt<-analysis(antis,tasks[3],tasks[4])
+AUC[2,3]<-aucf(antis_prnt[[1]])$AUC[1]
+
+
+###Anti-PD-1
+antik<-ds[ds$dataset=="Anti-PD-1, Kreig 2018",]
+antik<-prep(antik,"responder")
+
+#%total hopach
+antik_hpch<-analysis(antik,tasks[1],tasks[1])
+AUC[3,1]<-aucf(antik_hpch[[1]])$AUC[1]
+
+#%total average linkage
+antik_link<-analysis(antik,tasks[2],tasks[2])
+AUC[3,2]<-aucf(antik_link[[1]])$AUC[1]
+
+#%parent
+antik_prnt<-analysis(antik,tasks[3],tasks[4])
+AUC[3,3]<-aucf(antik_prnt[[1]])$AUC[1]
+
+
+###BCR-XL-sim
+bcr<-ds[ds$dataset=="BCR XL sim, Weber 2019",]
+bcr<-prep(bcr,"spike")
+
+#%total hopach
+bcr_hpch<-analysis(bcr,tasks[1],tasks[1])
+AUC[4,1]<-aucf(bcr_hpch[[1]])$AUC[1]
+
+#%total average linkage
+bcr_link<-analysis(bcr,tasks[2],tasks[2])
+AUC[4,2]<-aucf(bcr_link[[1]])$AUC[1]
+
+#%parent
+bcr_prnt<-analysis(bcr,tasks[3],tasks[4])
+AUC[4,3]<-aucf(bcr_prnt[[1]])$AUC[1]
+
+
+###Breast cancer tumor
+breast<-ds[ds$dataset=="Breast Cancer, Wagner 2019",]
+breast<-prep(breast,"tumor")
+
+#%total hopach
+breast_hpch<-analysis(breast,tasks[1],tasks[1])
+AUC[5,1]<-aucf(breast_hpch[[1]])$AUC[1]
+
+#%total average linkage
+breast_link<-analysis(breast,tasks[2],tasks[2])
+AUC[5,2]<-aucf(breast_link[[1]])$AUC[1]
+
+#%parent
+breast_prnt<-analysis(breast,tasks[3],tasks[4])
+AUC[5,3]<-aucf(breast_prnt[[1]])$AUC[1]
+
+
+###CMV
+cmv<-ds[ds$dataset=="CMV, Davis 2019",]
+cmv<-prep(cmv,"positive")
+
+#%total hopach
+cmv_hpch<-analysis(cmv,tasks[1],tasks[1])
+AUC[6,1]<-aucf(cmv_hpch[[1]])$AUC[1]
+
+#%total average linkage
+cmv_link<-analysis(cmv,tasks[2],tasks[2])
+AUC[6,2]<-aucf(cmv_link[[1]])$AUC[1]
+
+#%parent
+cmv_prnt<-analysis(cmv,tasks[3],tasks[4])
+AUC[6,3]<-aucf(cmv_link[[1]])$AUC[1]
+
+
+###COVID-19 whole blood CyTOF
+blood<-ds[ds$dataset=="COVID-19 Whole Blood CyTOF, Geanon 2020",]
+blood<-prep(blood,"COVID-19")
+
+#%total hopach
+blood_hpch<-analysis(blood,tasks[1],tasks[1])
+AUC[7,1]<-aucf(blood_hpch[[1]])$AUC[1]
+
+#%total average linkage
+blood_link<-analysis(blood,tasks[2],tasks[2])
+AUC[7,2]<-aucf(blood_link[[1]])$AUC[1]
+
+#%parent
+blood_prnt<-analysis(blood,tasks[3],tasks[4])
+AUC[7,3]<-aucf(blood_prnt[[1]])$AUC[1]
+
+
+###COVID-19 PBMCs
+baron<-ds[ds$dataset=="COVID-19 PBMC, Humblet-Baron 2020",]
+baron<-prep(baron,"ICU")
+
+#%total hopach
+baron_hpch<-analysis(baron,tasks[1],tasks[1])
+AUC[8,1]<-aucf(baron_hpch[[1]])$AUC[1]
+
+#%total average linkage
+baron_link<-analysis(baron,tasks[2],tasks[2])
+AUC[8,2]<-aucf(baron_link[[1]])$AUC[1]
+
+#%parent
+baron_prnt<-analysis(baron,tasks[3],tasks[4])
+AUC[8,3]<-aucf(baron_prnt[[1]])$AUC[1]
+
+
+###COVID-19 PBMC CD8+ non-naive T cells
+math<-ds[ds$dataset=="COVID-19 PBMC, Mathew 2020",]
+math<-prep(math,"RD")
+
+#%total hopach
+math_hpch<-analysis(math,tasks[1],tasks[1])
+AUC[9,1]<-aucf(math_hpch[[1]])$AUC[1]
+
+#%total average linkage
+math_link<-analysis(math,tasks[2],tasks[2])
+AUC[9,2]<-aucf(math_link[[1]])$AUC[1]
+
+#%parent
+math_prnt<-analysis(math,tasks[3],tasks[4])
+AUC[9,3]<-aucf(math_prnt[[1]])$AUC[1]
+
+
+###COVID-19 T cells CD4
+covid4<-ds[ds$dataset=="COVID-19 T cells, De Biasi 2020"&ds$data_panel_name=="CD4",]
+covid4<-prep(covid4,"COV")
+
+#%total hopach
+covid4_hpch<-analysis(covid4,tasks[1],tasks[1])
+AUC[10,1]<-aucf(covid4_hpch[[1]])$AUC[1]
+
+#%total average linkage
+covid4_link<-analysis(covid4,tasks[2],tasks[2])
+AUC[10,2]<-aucf(covid4_link[[1]])$AUC[1]
+
+#%parent
+covid4_prnt<-analysis(covid4,tasks[3],tasks[4])
+AUC[10,3]<-aucf(covid4_prnt[[1]])$AUC[1]
+
+
+###COVID-19 T cells CD8
+covid8<-ds[ds$dataset=="COVID-19 T cells, De Biasi 2020"&ds$data_panel_name=="CD8",]
+covid8<-prep(covid8,"COV")
+
+#%total hopach
+covid8_hpch<-analysis(covid8,tasks[1],tasks[1])
+AUC[11,1]<-aucf(covid8_hpch[[1]])$AUC[1]
+
+#%total average linkage
+covid8_link<-analysis(covid8,tasks[2],tasks[2])
+AUC[11,2]<-aucf(covid8_link[[1]])$AUC[1]
+
+#%parent
+covid8_prnt<-analysis(covid8,tasks[3],tasks[4])
+AUC[11,3]<-aucf(covid8_prnt[[1]])$AUC[1]
+
+
+###Melanoma
+mela<-ds[ds$dataset=="Melanoma, Sade-Feldman 2019",]
+mela<-prep(mela,"responder")
+
+#%total hopach
+mela_hpch<-analysis(mela,tasks[1],tasks[1])
+AUC[12,1]<-aucf(mela_hpch[[1]])$AUC[1]
+
+#%total average linkage
+mela_link<-analysis(mela,tasks[2],tasks[2])
+AUC[12,2]<-aucf(mela_link[[1]])$AUC[1]
+
+#%parent
+mela_prnt<-analysis(mela,tasks[3],tasks[4])
+AUC[12,3]<-aucf(mela_prnt[[1]])$AUC[1]
+@
+
+
+\begin{figure}[H]
+<<echo=FALSE>>=
+par(mfrow=c(2,3))
+
+<<analysis.code>>
+  
+all<-list(age_hpch,age_link,age_prnt,antis_hpch,antis_link,antis_prnt,antik_hpch,antik_link,antik_prnt,bcr_hpch,bcr_link,bcr_prnt,breast_hpch,breast_link,breast_prnt,cmv_hpch,cmv_link,cmv_prnt,blood_hpch,blood_link,blood_prnt,baron_hpch,baron_link,baron_prnt,math_hpch,math_link,math_prnt,covid4_hpch,covid4_link,covid4_prnt,covid8_hpch,covid8_link,covid8_prnt,mela_hpch,mela_link,mela_prnt)
+title<-rep(c("%total hopach","%total average linkage","%parent"),12)
+
+
+for(i in 1:length(all)){
+  plot(all[[i]][[2]],colorize=T,main=paste(rownames(AUC)[i],title[i]))
+}
+@
+title{ROC curves.\label{fig:1}}
+\end{figure}
+
+
 - provide Benchmarking plots, once using balanced accuracy as a measure of comparison, once using our "own"
 - report findings / observations
