@@ -10,24 +10,26 @@ opts_chunk$set(
 
 \chapter{Methods} 
 
-For the whole analysis, we were using R version 4.1.2, Rstudio version 1.4.1103 and BiocManager version 3.14.
-
-\section{Reproduction of treekoR Analysis on Age Chronic Dataset}
+For our project, we used R version 4.1.2 and BiocManager version 4.13. 
 
 To use the treekoR package from BiocManager on data, the data must first be converted to a Single Cell Experiment object. According to the treekoR paper's specifications, the count data were transformed using an arcsinh transformation with cofactor 5. The data were then clustered using the FlowSOM-based function cluster() from the CATALYST package. 
 FlowSOM uses a self-organising map in order to analyse cytometry data. Its goal is to prevent the potential loss in subset detection that comes with the increasing number of markers measured in cytometry. To this end, it uses two-level clustering and star charts. %cite FlowSOM paper
 
-part I: reproduction of treekoR analysis on Age Chronic (?) data set
-- reading in, transforming fsc to sce
-- arcsinh transformation with cofactor 5 of count data
-- clustering of data using flowSom-based function cluster() from the CATALYST package
-- construct cell hierarchy, once using "hopach" and once using "average linkage" algorithm, with function given in treekoR package, provide short explanation of how these these two hierarchical clustering algorithms work
-- compute parent as well as total proportions for both hierarchical trees
-- significance testing for both proportions
-- visualisation for both hierarchies
+
+\section{part I: reproduction of treekoR analysis on Age Chronic data set}
+
+First, the flowSOM files (fcs) were read in and transformed to a Single Cell Experiment object (sce) in order to make them available for the treekoR functions. Metadata regarding the age of the individuals ('Old' or 'Young' based on a cutoff of 40 years) were appended manually. Next, the data were arcsinh-transformed with a cofactor 5, and clustered using the flowSom-based function cluster() built into the CATALYST package. Cell hierarchy was achieved by using treekoR with both the "HOPACH" and "average linkage" algorithms.
+
+"HOPACH" works by recursively partitioning a data set with the PAM algorithm, short for Partitioning Around Medioids, while ordering and possibly collapsing clusters at each level. "PAM" works by calculating the so-called medioids through a dissimilarity matrix, where dissimilarities can be either Euclidean distance or based on correlation of the individual elements. The product is a hierarchically structured tree of nodes. Different from other hierarchical clustering algorithms, "HOPACH" allows for more than two children at every node. This becomes visible in the visualisation of the treekoR analysis. %cite HOPACH paper
+
+"Average linkage" on the other hand works by calculating the average distance between each pair of observations between clusters. %cite maybe this: https://www.solver.com/xlminer/help/hierarchical-clustering-intro
 
 
-part II: Benchmarking
-- use provided datasets by the author(s) of treekoR
-- use their code (provide description of what the code does here)
-- on top of balanced accuracy, compute our chosen measure and explain how it is computed
+\section{part II: Benchmarking}
+
+For the benchmarking step we used the datasets provided by the authors of treekoR. %cite link to the data
+
+To do the benchmarking, the authors computed probabilities for each cell to belong to either one of the conditions, for example diseased or healthy (prob.pos and prob.neg). Both were obtained using machine learning tools from the package mlr3 to train and predict the binary clinical outcome using \%total based on either HOPACH or average linkage and \%parent. On top of prob.pos and prob.neg, the authors provided a coloumn called truth, which showed the true condition of each single cell, as well as a coloumn called response, which showed the condition predicted by their model. These values were used by the authors to compute balanced accuracy, which is the weighted average of specificity and sensitivity. %cite balanced accuracy paper
+
+For our Benchmarking, we used a different performance evaluation measure: the area under the receiver operating characteristics (ROC) curve (AUC). %cite AUC paper
+ROC curves plot the true positive rate (TPR) / Specificity against the false positive rate (FPR) / 1 - Sensitivity against each other to show a model's evaluation performance compared to random evaluation.
