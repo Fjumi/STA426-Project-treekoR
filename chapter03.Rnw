@@ -301,21 +301,50 @@ AUC[12,3]<-aucf(mela_prnt[[1]])$AUC[1]
 @
 
 
-\begin{figure}[H]
-<<echo=FALSE>>=
-par(mfrow=c(2,3))
+<<fig.code, echo=FALSE>>=
 
 <<analysis.code>>
   
 all<-list(age_hpch,age_link,age_prnt,antis_hpch,antis_link,antis_prnt,antik_hpch,antik_link,antik_prnt,bcr_hpch,bcr_link,bcr_prnt,breast_hpch,breast_link,breast_prnt,cmv_hpch,cmv_link,cmv_prnt,blood_hpch,blood_link,blood_prnt,baron_hpch,baron_link,baron_prnt,math_hpch,math_link,math_prnt,covid4_hpch,covid4_link,covid4_prnt,covid8_hpch,covid8_link,covid8_prnt,mela_hpch,mela_link,mela_prnt)
 title<-rep(c("%total hopach","%total average linkage","%parent"),12)
 
-
 for(i in 1:length(all)){
-  plot(all[[i]][[2]],colorize=T,main=paste(rownames(AUC)[i],title[i]))
+  plots<-plot(all[[i]][[2]],colorize=T,main=paste(rownames(AUC)[i],title[i]))
 }
 @
-title{ROC curves.\label{fig:1}}
+
+
+\begin{figure}
+<<echo=FALSE>>=
+par(mfrow=c(4,3))
+
+<<fig.code>>
+  
+plots[1:12]
+@
+\title{ROC curves of datasets 1-4.\label{fig:1}}
+\end{figure}
+
+\begin{figure}
+<<echo=FALSE>>=
+par(mfrow=c(4,3))
+
+<<fig.code>>
+  
+plots[13:24]
+@
+\title{ROC curves of datasets 5-8.\label{fig:2}}
+\end{figure}
+
+\begin{figure}
+<<echo=FALSE>>=
+par(mfrow=c(4,3))
+
+<<fig.code>>
+  
+plots[25:36]
+@
+\title{ROC curves of datasets 9-12.\label{fig:3}}
 \end{figure}
 
 

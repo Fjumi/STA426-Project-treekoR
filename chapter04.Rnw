@@ -12,7 +12,6 @@ opts_chunk$set(
 \chapter{Discussion}\label{sec:discussion}
 
 part I:
-- why does our analysis look different from theirs?
 - what has remained unclear?
 - what could be explored further?
 

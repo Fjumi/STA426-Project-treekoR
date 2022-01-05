@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2020.6.26)  4 JAN 2022 21:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2020.6.26)  5 JAN 2022 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -763,54 +763,608 @@ LaTeX Font Info:    Try loading font information for T1+cmtt on input line 165.
 tt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 187.
+<figure/fig_code-1.pdf, id=91, 505.89pt x 505.89pt>
+File: figure/fig_code-1.pdf Graphic file (type pdf)
+<use figure/fig_code-1.pdf>
+Package pdftex.def Info: figure/fig_code-1.pdf  used on input line 185.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--187
-[]\T1/cmtt/m/n/10.95 ## Error in xy.coords(x, y, xlabel, ylabel, log): 'x' is a
- list, but does not
+Overfull \hbox (17.0pt too wide) in paragraph at lines 185--186
+[][] 
  []
 
-[9
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9
 
 ]
+<figure/fig_code-2.pdf, id=98, 505.89pt x 505.89pt>
+File: figure/fig_code-2.pdf Graphic file (type pdf)
+<use figure/fig_code-2.pdf>
+Package pdftex.def Info: figure/fig_code-2.pdf  used on input line 187.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 187--188
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10 <./figure/fig_code-1.pdf>]
+<figure/fig_code-3.pdf, id=109, 505.89pt x 505.89pt>
+File: figure/fig_code-3.pdf Graphic file (type pdf)
+<use figure/fig_code-3.pdf>
+Package pdftex.def Info: figure/fig_code-3.pdf  used on input line 189.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 189--190
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11 <./figure/fig_code-2.pdf>]
+<figure/fig_code-4.pdf, id=120, 505.89pt x 505.89pt>
+File: figure/fig_code-4.pdf Graphic file (type pdf)
+<use figure/fig_code-4.pdf>
+Package pdftex.def Info: figure/fig_code-4.pdf  used on input line 191.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 191--192
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./figure/fig_code-3.pdf>]
+<figure/fig_code-5.pdf, id=131, 505.89pt x 505.89pt>
+File: figure/fig_code-5.pdf Graphic file (type pdf)
+<use figure/fig_code-5.pdf>
+Package pdftex.def Info: figure/fig_code-5.pdf  used on input line 193.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 193--194
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13 <./figure/fig_code-4.pdf>]
+<figure/fig_code-6.pdf, id=143, 505.89pt x 505.89pt>
+File: figure/fig_code-6.pdf Graphic file (type pdf)
+<use figure/fig_code-6.pdf>
+Package pdftex.def Info: figure/fig_code-6.pdf  used on input line 195.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 195--196
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [14 <./figure/fig_code-5.pdf>]
+<figure/fig_code-7.pdf, id=155, 505.89pt x 505.89pt>
+File: figure/fig_code-7.pdf Graphic file (type pdf)
+<use figure/fig_code-7.pdf>
+Package pdftex.def Info: figure/fig_code-7.pdf  used on input line 197.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 197--198
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15 <./figure/fig_code-6.pdf>]
+<figure/fig_code-8.pdf, id=166, 505.89pt x 505.89pt>
+File: figure/fig_code-8.pdf Graphic file (type pdf)
+<use figure/fig_code-8.pdf>
+Package pdftex.def Info: figure/fig_code-8.pdf  used on input line 199.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 199--200
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16 <./figure/fig_code-7.pdf>]
+<figure/fig_code-9.pdf, id=177, 505.89pt x 505.89pt>
+File: figure/fig_code-9.pdf Graphic file (type pdf)
+<use figure/fig_code-9.pdf>
+Package pdftex.def Info: figure/fig_code-9.pdf  used on input line 201.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 201--202
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17 <./figure/fig_code-8.pdf>]
+<figure/fig_code-10.pdf, id=188, 505.89pt x 505.89pt>
+File: figure/fig_code-10.pdf Graphic file (type pdf)
+<use figure/fig_code-10.pdf>
+Package pdftex.def Info: figure/fig_code-10.pdf  used on input line 203.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 203--204
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18 <./figure/fig_code-9.pdf>]
+<figure/fig_code-11.pdf, id=199, 505.89pt x 505.89pt>
+File: figure/fig_code-11.pdf Graphic file (type pdf)
+<use figure/fig_code-11.pdf>
+Package pdftex.def Info: figure/fig_code-11.pdf  used on input line 205.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 205--206
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./figure/fig_code-10.pdf>]
+<figure/fig_code-12.pdf, id=211, 505.89pt x 505.89pt>
+File: figure/fig_code-12.pdf Graphic file (type pdf)
+<use figure/fig_code-12.pdf>
+Package pdftex.def Info: figure/fig_code-12.pdf  used on input line 207.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 207--208
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20 <./figure/fig_code-11.pdf>]
+<figure/fig_code-13.pdf, id=222, 505.89pt x 505.89pt>
+File: figure/fig_code-13.pdf Graphic file (type pdf)
+<use figure/fig_code-13.pdf>
+Package pdftex.def Info: figure/fig_code-13.pdf  used on input line 209.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 209--210
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./figure/fig_code-12.pdf>]
+<figure/fig_code-14.pdf, id=233, 505.89pt x 505.89pt>
+File: figure/fig_code-14.pdf Graphic file (type pdf)
+<use figure/fig_code-14.pdf>
+Package pdftex.def Info: figure/fig_code-14.pdf  used on input line 211.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 211--212
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [22 <./figure/fig_code-13.pdf>]
+<figure/fig_code-15.pdf, id=244, 505.89pt x 505.89pt>
+File: figure/fig_code-15.pdf Graphic file (type pdf)
+<use figure/fig_code-15.pdf>
+Package pdftex.def Info: figure/fig_code-15.pdf  used on input line 213.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 213--214
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [23 <./figure/fig_code-14.pdf>]
+<figure/fig_code-16.pdf, id=255, 505.89pt x 505.89pt>
+File: figure/fig_code-16.pdf Graphic file (type pdf)
+<use figure/fig_code-16.pdf>
+Package pdftex.def Info: figure/fig_code-16.pdf  used on input line 215.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 215--216
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24 <./figure/fig_code-15.pdf>]
+<figure/fig_code-17.pdf, id=266, 505.89pt x 505.89pt>
+File: figure/fig_code-17.pdf Graphic file (type pdf)
+<use figure/fig_code-17.pdf>
+Package pdftex.def Info: figure/fig_code-17.pdf  used on input line 217.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 217--218
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25 <./figure/fig_code-16.pdf>]
+<figure/fig_code-18.pdf, id=278, 505.89pt x 505.89pt>
+File: figure/fig_code-18.pdf Graphic file (type pdf)
+<use figure/fig_code-18.pdf>
+Package pdftex.def Info: figure/fig_code-18.pdf  used on input line 219.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 219--220
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26 <./figure/fig_code-17.pdf>]
+<figure/fig_code-19.pdf, id=289, 505.89pt x 505.89pt>
+File: figure/fig_code-19.pdf Graphic file (type pdf)
+<use figure/fig_code-19.pdf>
+Package pdftex.def Info: figure/fig_code-19.pdf  used on input line 221.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 221--222
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27 <./figure/fig_code-18.pdf>]
+<figure/fig_code-20.pdf, id=301, 505.89pt x 505.89pt>
+File: figure/fig_code-20.pdf Graphic file (type pdf)
+<use figure/fig_code-20.pdf>
+Package pdftex.def Info: figure/fig_code-20.pdf  used on input line 223.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 223--224
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28 <./figure/fig_code-19.pdf>]
+<figure/fig_code-21.pdf, id=312, 505.89pt x 505.89pt>
+File: figure/fig_code-21.pdf Graphic file (type pdf)
+<use figure/fig_code-21.pdf>
+Package pdftex.def Info: figure/fig_code-21.pdf  used on input line 225.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 225--226
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29 <./figure/fig_code-20.pdf>]
+<figure/fig_code-22.pdf, id=323, 505.89pt x 505.89pt>
+File: figure/fig_code-22.pdf Graphic file (type pdf)
+<use figure/fig_code-22.pdf>
+Package pdftex.def Info: figure/fig_code-22.pdf  used on input line 227.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 227--228
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30 <./figure/fig_code-21.pdf>]
+<figure/fig_code-23.pdf, id=334, 505.89pt x 505.89pt>
+File: figure/fig_code-23.pdf Graphic file (type pdf)
+<use figure/fig_code-23.pdf>
+Package pdftex.def Info: figure/fig_code-23.pdf  used on input line 229.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 229--230
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31 <./figure/fig_code-22.pdf>]
+<figure/fig_code-24.pdf, id=346, 505.89pt x 505.89pt>
+File: figure/fig_code-24.pdf Graphic file (type pdf)
+<use figure/fig_code-24.pdf>
+Package pdftex.def Info: figure/fig_code-24.pdf  used on input line 231.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 231--232
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32 <./figure/fig_code-23.pdf>]
+<figure/fig_code-25.pdf, id=357, 505.89pt x 505.89pt>
+File: figure/fig_code-25.pdf Graphic file (type pdf)
+<use figure/fig_code-25.pdf>
+Package pdftex.def Info: figure/fig_code-25.pdf  used on input line 233.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 233--234
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33 <./figure/fig_code-24.pdf>]
+<figure/fig_code-26.pdf, id=368, 505.89pt x 505.89pt>
+File: figure/fig_code-26.pdf Graphic file (type pdf)
+<use figure/fig_code-26.pdf>
+Package pdftex.def Info: figure/fig_code-26.pdf  used on input line 235.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 235--236
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34 <./figure/fig_code-25.pdf>]
+<figure/fig_code-27.pdf, id=379, 505.89pt x 505.89pt>
+File: figure/fig_code-27.pdf Graphic file (type pdf)
+<use figure/fig_code-27.pdf>
+Package pdftex.def Info: figure/fig_code-27.pdf  used on input line 237.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 237--238
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35 <./figure/fig_code-26.pdf>]
+<figure/fig_code-28.pdf, id=390, 505.89pt x 505.89pt>
+File: figure/fig_code-28.pdf Graphic file (type pdf)
+<use figure/fig_code-28.pdf>
+Package pdftex.def Info: figure/fig_code-28.pdf  used on input line 239.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 239--240
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [36 <./figure/fig_code-27.pdf>]
+<figure/fig_code-29.pdf, id=401, 505.89pt x 505.89pt>
+File: figure/fig_code-29.pdf Graphic file (type pdf)
+<use figure/fig_code-29.pdf>
+Package pdftex.def Info: figure/fig_code-29.pdf  used on input line 241.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 241--242
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37 <./figure/fig_code-28.pdf>]
+<figure/fig_code-30.pdf, id=413, 505.89pt x 505.89pt>
+File: figure/fig_code-30.pdf Graphic file (type pdf)
+<use figure/fig_code-30.pdf>
+Package pdftex.def Info: figure/fig_code-30.pdf  used on input line 243.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 243--244
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38 <./figure/fig_code-29.pdf>]
+<figure/fig_code-31.pdf, id=424, 505.89pt x 505.89pt>
+File: figure/fig_code-31.pdf Graphic file (type pdf)
+<use figure/fig_code-31.pdf>
+Package pdftex.def Info: figure/fig_code-31.pdf  used on input line 245.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 245--246
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39 <./figure/fig_code-30.pdf>]
+<figure/fig_code-32.pdf, id=436, 505.89pt x 505.89pt>
+File: figure/fig_code-32.pdf Graphic file (type pdf)
+<use figure/fig_code-32.pdf>
+Package pdftex.def Info: figure/fig_code-32.pdf  used on input line 247.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 247--248
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40 <./figure/fig_code-31.pdf>]
+<figure/fig_code-33.pdf, id=447, 505.89pt x 505.89pt>
+File: figure/fig_code-33.pdf Graphic file (type pdf)
+<use figure/fig_code-33.pdf>
+Package pdftex.def Info: figure/fig_code-33.pdf  used on input line 249.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 249--250
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41 <./figure/fig_code-32.pdf>]
+<figure/fig_code-34.pdf, id=458, 505.89pt x 505.89pt>
+File: figure/fig_code-34.pdf Graphic file (type pdf)
+<use figure/fig_code-34.pdf>
+Package pdftex.def Info: figure/fig_code-34.pdf  used on input line 251.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 251--252
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42 <./figure/fig_code-33.pdf>]
+<figure/fig_code-35.pdf, id=469, 505.89pt x 505.89pt>
+File: figure/fig_code-35.pdf Graphic file (type pdf)
+<use figure/fig_code-35.pdf>
+Package pdftex.def Info: figure/fig_code-35.pdf  used on input line 253.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 253--254
+[][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43 <./figure/fig_code-34.pdf>]
+<figure/fig_code-36.pdf, id=481, 505.89pt x 505.89pt>
+File: figure/fig_code-36.pdf Graphic file (type pdf)
+<use figure/fig_code-36.pdf>
+Package pdftex.def Info: figure/fig_code-36.pdf  used on input line 255.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+Overfull \hbox (17.0pt too wide) in paragraph at lines 255--257
+[][]
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44 <./figure/fig_code-35.pdf>]
+<figure/unnamed-chunk-1-1.pdf, id=492, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-1.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-1-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-1.pdf  used on input line 265.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+<figure/unnamed-chunk-1-2.pdf, id=493, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-2.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-1-2.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-2.pdf  used on input line 267.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+<figure/unnamed-chunk-1-3.pdf, id=494, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-1-3.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-1-3.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-1-3.pdf  used on input line 269.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+
+LaTeX Warning: Float too large for page by 733.05058pt on input line 276.
+
+<figure/unnamed-chunk-2-1.pdf, id=495, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-2-1.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-2-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-2-1.pdf  used on input line 284.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+<figure/unnamed-chunk-2-2.pdf, id=496, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-2-2.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-2-2.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-2-2.pdf  used on input line 286.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+<figure/unnamed-chunk-2-3.pdf, id=497, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-2-3.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-2-3.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-2-3.pdf  used on input line 288.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+LaTeX Warning: Float too large for page by 733.05058pt on input line 295.
+
+<figure/unnamed-chunk-3-1.pdf, id=498, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-3-1.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-3-1.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-3-1.pdf  used on input line 303.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+<figure/unnamed-chunk-3-2.pdf, id=499, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-3-2.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-3-2.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-3-2.pdf  used on input line 305.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+<figure/unnamed-chunk-3-3.pdf, id=500, 505.89pt x 505.89pt>
+File: figure/unnamed-chunk-3-3.pdf Graphic file (type pdf)
+<use figure/unnamed-chunk-3-3.pdf>
+Package pdftex.def Info: figure/unnamed-chunk-3-3.pdf  used on input line 307.
+(pdftex.def)             Requested size: 455.30121pt x 455.31221pt.
+
+LaTeX Warning: Float too large for page by 733.05058pt on input line 314.
+
+[45 <./figure/fig_code-36.pdf>] [46 <./figure/unnamed-chunk-1-1.pdf> <./figure/
+unnamed-chunk-1-2.pdf> <./figure/unnamed-chunk-1-3.pdf>] [47 <./figure/unnamed-
+chunk-2-1.pdf> <./figure/unnamed-chunk-2-2.pdf> <./figure/unnamed-chunk-2-3.pdf
+>] [48 <./figure/unnamed-chunk-3-1.pdf> <./figure/unnamed-chunk-3-2.pdf> <./fig
+ure/unnamed-chunk-3-3.pdf>]
 Chapter 4.
-[10
+[49
 
 ]
 Appendix A.
-[11
-
-] [12
+[50
 
 ] (./report.bbl (./report.brf)
 \tf@brf=\write6
 \openout6 = `report.brf'.
 
-) [13
+) [51
 
-] [14
+
+] [52
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 239.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 239.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 363.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 363.
  (./report.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 239.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 239.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 363.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 363.
 Package rerunfilecheck Info: File `report.out' has not changed.
-(rerunfilecheck)             Checksum: 8485AE4EC2DEE9917AD66D496EB02A9F;443.
+(rerunfilecheck)             Checksum: 5B320A51F83C9A36937A6F82071C58A5;443.
 Package rerunfilecheck Info: File `report.brf' has not changed.
 (rerunfilecheck)             Checksum: 8C06503381E8714D34A7406786975874;39.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 239.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 363.
  ) 
 Here is how much of TeX's memory you used:
- 10342 strings out of 492639
- 151390 string characters out of 6117887
- 258166 words of memory out of 5000000
- 14035 multiletter control sequences out of 15000+600000
+ 10605 strings out of 492639
+ 158455 string characters out of 6117887
+ 258102 words of memory out of 5000000
+ 14212 multiletter control sequences out of 15000+600000
  16566 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,5n,43p,756b,345s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,6n,43p,756b,376s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/sepp1.5.1/drwho/pack-a/texlive-20181114-cr/texmf-dist/fonts/enc/dvips/c
 m-super/cm-super-t1.enc}</usr/sepp1.5.1/drwho/pack-a/texlive-20181114-cr/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sepp1.5.1/drwho/pack-a/tex
@@ -827,10 +1381,10 @@ t/fonts/type1/public/cm-super/sfrm1095.pfb></usr/sepp1.5.1/drwho/pack-a/texlive
 1/drwho/pack-a/texlive-20181114-cr/texmf-dist/fonts/type1/public/cm-super/sfti1
 095.pfb></usr/sepp1.5.1/drwho/pack-a/texlive-20181114-cr/texmf-dist/fonts/type1
 /public/cm-super/sftt1095.pfb>
-Output written on report.pdf (14 pages, 200718 bytes).
+Output written on report.pdf (52 pages, 7954060 bytes).
 PDF statistics:
- 167 PDF objects out of 1000 (max. 8388607)
- 138 compressed objects within 2 object streams
- 27 named destinations out of 1000 (max. 500000)
- 65 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 656 PDF objects out of 1000 (max. 8388607)
+ 496 compressed objects within 5 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 290 words of extra memory for PDF output out of 10000 (max. 10000000)
 
