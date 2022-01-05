@@ -11,12 +11,22 @@ opts_chunk$set(
 % 
 \chapter{Discussion}\label{sec:discussion}
 
-part I:
-- what has remained unclear?
-- what could be explored further?
 
-part II: 
-- why does our analysis look different than theirs?
-- are there differences when using other measure instead of balanced accuracy? why? what does that mean?
-- what remains unclear?
-- what could be explored further?
+\section{treekoR analysis on Age Chronic dataset}
+
+In our project, we applied the treekoR analysis on the Age Chronic dataset from Shen-Orr et al. and found two significant clusters. We did not look further into what these clusters contain, but neither of them would have been detected when using only \%total. Hence we managed to reproduce the important message of treekoR: The use of \%parent on top of the use of \%total helps to discover cellular-to-phenotype associations.
+We did use "HOPACH" as well as "average-linkage hierarchical clustering" for the hierarchical clustering. Their different influence on the analysis was nicely visible in the resulting plots. Both the hierarchical tree as well as the clusters determined to be significant differed between the two hierarchical clustering algorithm. This highlights the importance of evaluating the most appropriate clustering algorithm for a certain dataset before attempting a treekoR analysis.
+
+
+\section{Benchmarking using ROC/AUC}
+
+In our project, we reproduced the Benchmarking of the treekoR paper. Instead of computing balanced accuracy, which might be biased in the case where one of the clinical outcomes is a lot more frequent than the other, we used ROC curves and their corresponding AUCs as our performance evaluation measure. 
+When looking at the AUC values across datasets, the same models perform better in our Benchmarking as in the Benchmarking from the treekoR paper.
+When looking at the AUC values within datasets, we were able to reproduce most trends, as well. 
+The most striking exception is the BCR-XL-sim dataset. In our Benchmarking, \%total performs clearly better than the \%parent analyses, whereas in the original Benchmarking, it is the other way around. One reason for this might be that balanced accuracy is computed iteratively and the resulting plot is a boxplot, which shows a distribution of balanced accuracy values, whereas for the AUC, one gets only a single value. When having a closer look at the Benchmarking plot of the treekoR paper, one might notice that BCR-XL-sim is the dataset with highest variance. Even though \%total has the lowest mean, there are values of the \%parent distributions that go far beyond it, and the lowest value of the \%parent using Hierarchical Clustering is lower than the lowest value of \%total. Such a high variance allows easily for a switch of trends when computing only one value as the performance evaluation measurement.
+Unfortunately, we were not able to compute an AUC for the \%total of the Breast Cancer Dataset due to integer overflow, which would have been interesting as this dataset shows a strong trend in the Benchmarking of the treekoR paper. We used the integrated function confIntAUC from the biostatUZH package to compute our AUC values. Due to time reasons, we decided to accept the NA, even though it might be possible to compute the AUC without error using a different computation method. 
+The name confIntAUC from the function we used already suggests that it would have been possible to plot confidence intervals for the AUC values, too. Due to the very small ranges of these CI's we decided to only plot the AUC estimate.
+
+Overall, our Benchmarking shows just as many datasets, where the use of \%parent is favourable, as it shows datasets, where the use of \%total is favourable. As already stated by the authors of treekoR, one should therefore not conclude that one metric is better than the other. The two proportions provide complementary views, both of which may be objective and biologically relevant. %cite treekoR
+
+In summary, our project further highlights the necessity to choose an appropriate clustering algorithm for any dataset. It reproduces the message of treekoR, that \%parent and \%total are best used complementary, and it shows that treekoR is a well-performing and intuitive framework for the analysis of cytometry data. 
