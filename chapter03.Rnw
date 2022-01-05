@@ -308,8 +308,15 @@ AUC[12,3]<-aucf(mela_prnt[[1]])$AUC[1]
 all<-list(age_hpch,age_link,age_prnt,antis_hpch,antis_link,antis_prnt,antik_hpch,antik_link,antik_prnt,bcr_hpch,bcr_link,bcr_prnt,breast_hpch,breast_link,breast_prnt,cmv_hpch,cmv_link,cmv_prnt,blood_hpch,blood_link,blood_prnt,baron_hpch,baron_link,baron_prnt,math_hpch,math_link,math_prnt,covid4_hpch,covid4_link,covid4_prnt,covid8_hpch,covid8_link,covid8_prnt,mela_hpch,mela_link,mela_prnt)
 title<-rep(c("%total hopach","%total average linkage","%parent"),12)
 
+names<-c()
+for(i in rownames(AUC)){
+  diese<-rep(i,3)
+  names<-c(names,diese)
+}
+
+
 for(i in 1:length(all)){
-  plots<-plot(all[[i]][[2]],colorize=T,main=paste(rownames(AUC)[i],title[i]))
+  plots<-plot(all[[i]][[2]],colorize=T,main=paste(names[i],title[i]))
 }
 @
 
